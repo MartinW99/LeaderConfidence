@@ -13,7 +13,7 @@ To-do:
 
 ### Group Composition / Assignment
 To-Do:
-# Assign Leaders based on performance
++ Assign Leaders based on performance
 
 ### Random Dots
 Current Status: Python script for the stimulus is functional, but NOT inside of otree
