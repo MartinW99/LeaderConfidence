@@ -1,6 +1,6 @@
 # LeaderConfidence
 
-## oTree: Main experiment
+## oTree: Main Experiment
 1. X Trials of simplified version of Iowa Gambling Task (IGT)
 2. followed by group and leader assignment based on outcomes
 3. These groups perform X trials of Random Dot Motion (RDM) Task
@@ -28,3 +28,7 @@ Group Decision Making:
 + All Players Report LEFT or RIGHT
 + Leader chosses whether or not to see the groups' reports
 + Leader makes decision
+
+## Beyond Main Experiment
++ BDM procedure to truly elicit value placed on revealing groups' vote by leaders
++ ...
