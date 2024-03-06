@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment on Task Performance</title>
+    <style>
+       button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Dear Participants,</p>
+
+    <p>
+        You’re involved in an experiment in which you can earn money based on your performance in two tasks. The amount
+        you will earn will depend on your own decisions as well as the decisions of other participants. Experimental
+        currencies (ECU) will be used throughout this experiment, with 1 ECU = &lt;&lt;&gt;&gt; Euros.
+    </p>
+
+    <p>
+        You will first play a game individually, in which you will be competing with 20(?) other players.
+    </p>
+
+    <div id="ControlInstructions" style="display: none;">
+        <p>
+            <strong>CG:</strong> At the end of this round, a random person will be allocated the role of a leader for the
+            second round in which you will take collective decisions with 3(?) other people.
+        </p>
+    </div>
+
+    <div id="TreatmentInstructions" style="display: none;">
+        <p>
+            <strong>TG:</strong> At the end of this round, the 5(?) top scorers will be allocated the role of a leader for
+            the second round in which you will take collective decisions with 3(?) other people.
+        </p>
+    </div>
+
+    <!-- Next button -->
+    <button onclick="nextStep()">Next</button>
+
+    <script>
+        function nextStep() {
+            // Get the group information (you may get this from your backend or user input)
+            var userGroup = getUserGroup(); // Implement this function based on your needs
+
+            // Show instructions based on the user's group
+            if (userGroup === 'Control') {
+                document.getElementById('ControlInstructions').style.display = 'block';
+            } else if (userGroup === 'Treatment') {
+                document.getElementById('TreatmentInstructions').style.display = 'block';
+            }
+
+            // Add additional logic for the next step
+            alert('Next step: Perform some action here!');
+        }
+
+        function getUserGroup() {
+            // Implement logic to determine the user's group (e.g., based on user data or input)
+            // This function should return 'Control' or 'Treatment'
+            // For demonstration purposes, returning 'Control'
+            return 'Control';
+        }
+    </script>
+</body>
+
+</html>

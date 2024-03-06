@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dot Task Instructions</title>
+    <style>
+        /* Style the buttons for better appearance */
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Everyone in the group must indicate their decision in each round of the dot task. To do this, you must click the left or right button at the bottom of the screen.</p>
+
+    <p>In every round, the leaders can choose to either look or not look at the others’ decisions.</p>
+
+    <p>
+        In the case they do not look at the others’ votes and give the correct response, they will be given an additional
+        1(?) ECU in the round. Therefore, the leader will earn 11(?) ECUs and the other group members will earn 10(?) ECUs.
+    </p>
+
+    <p>
+        In the case they look at others’ votes and give the correct response, a cost of 1(?) ECU will be imposed on their
+        endowment. Therefore, the leader will earn 10(?) ECUs and the other group members will earn 10(?) ECUs.
+    </p>
+
+    &lt;&lt;more on payoffs&gt;&gt;
+    </p>
+
+    <!-- Buttons for indicating decision -->
+    <button onclick="Next">Next</button>
+
+   <!-- Additional instructions for leaders -->
+    <div id="leaderInstructions" style="display: none;">
+        <p>
+            In the case they do not look at the others’ votes and give the correct response, they will be given an
+            additional 1(?) ECU in the round. Therefore, the leader will earn 11(?) ECUs and the other group members
+            will earn 10(?) ECUs.
+        </p>
+        <p>
+            In the case they look at others’ votes and give the correct response, a cost of 1(?) ECU will be imposed on
+            their endowment. Therefore, the leader will earn 10(?) ECUs and the other group members will earn 10(?) ECUs.
+        </p>
+    </div>
+
+    <script>
+        function indicateDecision(decision) {
+            // Add logic for processing the indicated decision
+            alert(`You indicated ${decision}. Compensation and leader's choice logic here.`);
+
+            // Show additional instructions for leaders
+            document.getElementById('leaderInstructions').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

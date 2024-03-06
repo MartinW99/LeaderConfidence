@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Instructions</title>
+    <style>
+        /* Style the buttons for better appearance */
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>In this task, you will view randomly moving dots on your screen. Your task is to determine the direction in which the dots are moving. You will only be able to view the dots for &lt;&lt;&gt;&gt; seconds.</p>
+
+    <p>
+        In this round, you will be paired with 3(?) other people, and you will be taking collective decisions.
+        You will be competing with 3(?) other groups of the same composition, and you will play 15(?) rounds.
+        Correct responses will be compensated with 10(?) ECUs, and incorrect responses will be compensated with 0(?) ECUs.
+    </p>
+
+    <p>
+        One person in the group will be assigned as a leader.
+        <strong>CG:</strong> The leader will be chosen randomly.
+        <strong>TG:</strong> The leader will be based on their performance in the previous round.
+        Specifically, the top 5 scorers of the previous round will lead groups in this round.
+        Your role will be indicated at the top of your screen when the round begins.
+    </p>
+
+    <!-- Buttons for actions -->
+    <button onclick="Next">Next</button>
+
+    <!-- Additional instructions for CG -->
+    <div id="cgInstructions" style="display: none;">
+        <p>The leader will be chosen randomly.</p>
+    </div>
+
+    <!-- Additional instructions for TG -->
+    <div id="tgInstructions" style="display: none;">
+        <p>The leader will be based on their performance in the previous round.
+            Specifically, the top 5 scorers of the previous round will lead groups in this round.</p>
+    </div>
+
+    <script>
+        function indicateDirection(direction) {
+            // Add logic for processing the indicated direction
+            alert(`You indicated ${direction}. Compensation and leader assignment logic here.`);
+
+            // Show additional instructions based on the indicated direction
+            if (direction === 'Left' || direction === 'Right') {
+                document.getElementById('cgInstructions').style.display = 'block';
+            } else if (direction === 'Up' || direction === 'Down') {
+                document.getElementById('tgInstructions').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

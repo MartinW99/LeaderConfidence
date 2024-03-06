@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Instructions</title>
+    <style>
+        /* Style the buttons for better appearance */
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>In this round, you will play this game against 20(?) people, with the following instructions:</p>
+
+    <p>
+        In this task, you are presented with 2 decks of cards. Each card you turn over has a high or low reward.
+        You start this round with an endowment of &lt;&lt;&gt;&gt; ECUs. The number on the card denotes the ECU attached
+        to that card.
+    </p>
+
+    <p>
+        Your task is to turn over {{ C.NUM_TRIALS }} cards, with the goal of making the highest payoff.
+        Each deck has a different distribution of rewards. To turn over the card, choose one of the two buttons below
+        the cards. The reward upon turning over the card will be announced to you as soon as you make your choice, and
+        will be used to adjust your endowment.
+    </p>
+
+    <p>
+        Please note that only your individual performance determines your payoff in this game.
+        &lt;&lt;More on payoff – random round? Average of all rounds?...&gt;&gt;.
+        You will play 20(?) rounds of this game, of which 10(?) will be practice rounds, and thus will not be used
+        to determine the payoff. The next 10(?) rounds will be used to determine your payoff.
+    </p>
+
+    <!-- Buttons for choosing the deck -->
+    <button onclick="Next">Next</button>
+
+    <!-- Additional instructions for CG -->
+    <div id="cgInstructions" style="display: none;">
+        <p>Also note that a random person will be assigned the role of a leader after this task.</p>
+    </div>
+
+    <!-- Additional instructions for TG -->
+    <div id="tgInstructions" style="display: none;">
+        <p>Also note that the 5 top scorers of this task will be assigned the role of a leader for the next task.</p>
+    </div>
+
+    <script>
+        function chooseDeck(deck) {
+            // Add logic for processing the chosen deck
+            alert(`You chose ${deck}. Reward announcement and endowment adjustment logic here.`);
+
+            // Show additional instructions based on the chosen deck
+            if (deck === 'Deck A') {
+                document.getElementById('cgInstructions').style.display = 'block';
+            } else if (deck === 'Deck B') {
+                document.getElementById('tgInstructions').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
